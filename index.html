@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="js/jquery-1.11.2.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Triangle Tracker</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Triangle Tracker</h1>
+
+    <form id="triangle-sides">
+      <ul class="fields">
+        <li>
+          <label class = "form-label" for="side1">Side 1</label>
+          <input class = "form-control" id="side1" type="text" required>
+        </li>
+        <li>
+          <label class = "form-label" for="side2">Side 2</label>
+          <input class = "form-control" id="side2" type="text" required>
+        </li>
+        <li>
+          <label class = "form-label" for="side3">Side 3</label>
+          <input class = "form-control" id="side3" type="text" required>
+        </li>
+      </ul>
+      <button class="button" type="submit" data-title="Triangle Detect" id="number" name="number">Triangle Detect</button>
+    </form>
+
+    <div id="result">
+      <p></p>
+    </div>
+
+    <div id="error">
+      <p>Please enter valid sides for a triangle!</p>
+    </div>
+
+  </div>
+</body>
+</html>
