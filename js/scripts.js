@@ -24,6 +24,9 @@ $(document).ready(function() {
                          else {
                            return "isosceles";
                          }
+                       },
+                       allSides: function() {
+                         return this.side1 + ", " + this.side2 + ", " + this.side3;
                        }
                       };
 
@@ -32,15 +35,10 @@ $(document).ready(function() {
         case "not a triangle":
           $("#error").show();
           break;
-        case "scalene":
-          $("#result p").text("You've made a scalene triangle!");
-          $("#result").show();
-          break;
         default:
-          $("#result p").text("You've made an " + triangleType + " triangle!")
-          $("#result").show();
+          $("#" + triangleType).append("<li>" + triangle.allSides() + "</li>");
       }
-    } else{
+    } else {
       $("#error").show();
     }
     event.preventDefault();

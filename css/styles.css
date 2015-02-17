@@ -16,6 +16,13 @@ body {
   border-radius: 15px;
 }
 
+.typeLists ul {
+  padding-left: 0;
+}
+.typeLists li {
+  list-style-type: none;
+}
+
 h1 {
   text-align: center;
   font-size: 48px;
