@@ -4,7 +4,6 @@ $(document).ready(function() {
   $("form#triangle-sides").submit(function(event) {
 
     $("#error").hide();
-    $("#result").hide();
 
     var side1 = parseFloat($("input#side1").val());
     var side2 = parseFloat($("input#side2").val());
@@ -36,11 +35,16 @@ $(document).ready(function() {
           $("#error").show();
           break;
         default:
-          $("#" + triangleType).append("<li>" + triangle.allSides() + "</li>");
+          $("#" + triangleType).append("<li class='triangleText'>" + triangle.allSides() + "</li>");
       }
     } else {
       $("#error").show();
     }
+
+    $(".triangleText").last().click(function() {
+      $(this).remove();
+    });
+
     event.preventDefault();
   });
 

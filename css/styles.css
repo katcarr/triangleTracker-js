@@ -34,6 +34,12 @@ h1 {
   text-align: center;
 }
 
+#instructions {
+  margin-top: 1em;
+  text-align: center;
+  text-decoration: underline;
+}
+
 #error {
   color: red;
 }
